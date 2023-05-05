@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/layout/activity_authentication.xml" value="0.1" />
+        <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/layout/election_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/layout/fragment_election.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/layout/fragment_select_location.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/layout/representative_item.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/menu/main_menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ENVY/AndroidStudioProjects/politicalpreparedness/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13703703703703704" />
       </map>
     </option>
   </component>

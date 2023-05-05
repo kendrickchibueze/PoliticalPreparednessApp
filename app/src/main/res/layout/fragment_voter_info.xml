@@ -96,7 +96,7 @@
             android:layout_marginStart="@dimen/large_padding"
             android:layout_marginEnd="@dimen/large_padding"
             android:layout_marginBottom="@dimen/default_padding"
-            android:backgroundTint="#3F51B5"
+            android:backgroundTint="#83192a"
             android:text="Follow"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
