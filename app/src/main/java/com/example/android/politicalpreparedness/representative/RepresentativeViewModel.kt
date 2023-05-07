@@ -13,38 +13,49 @@ import kotlinx.coroutines.launch
 
 class RepresentativeViewModel : ViewModel() {
 
-    private val _representativesResponse = MutableLiveData<RepresentativeResponse>()
-    val representativeResponse: LiveData<RepresentativeResponse> = _representativesResponse
+    private var _representativesResponse = MutableLiveData<RepresentativeResponse>()
+    val representativeResponse : LiveData<RepresentativeResponse>
+        get() = _representativesResponse
 
-    private val _representatives = MutableLiveData<List<Representative>>()
-    val representatives: LiveData<List<Representative>> = _representatives
+    private var _representatives = MutableLiveData<List<Representative>>()
+    val representatives : LiveData<List<Representative>>
+        get() = _representatives
 
-    private val _addressOfUser = MutableLiveData<Address>()
-    val addressOfUser: LiveData<Address> = _addressOfUser
 
-    fun setAddressOfUser(address: Address) {
-        _addressOfUser.value = address
-    }
+    private var _addressOfUser = MutableLiveData<Address>()
+    val addressOfUser : LiveData<Address>
+        get() = _addressOfUser
 
-    fun setRepresentatives(list: List<Representative>) {
-        _representatives.value = list
-    }
+
+
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage: LiveData<String>
+        get() = _errorMessage
 
     fun getRepresentativeResponse() {
         viewModelScope.launch {
-            val response = getCivicApiRepresentatives()
-            _representativesResponse.value = response
-            setRepresentativesFromResponse()
+            try {
+                val response =
+                    CivicsApi.retrofitService.getRepresentatives(_addressOfUser.value!!.toFormattedString())
+                _representativesResponse.value = response
+
+                val offices = _representativesResponse.value!!.offices
+                val officials = _representativesResponse.value!!.officials
+                _representatives.value = offices.flatMap { office -> office.getRepresentatives(officials) }
+            } catch (e: Exception) {
+                _errorMessage.value = "Failed to retrieve representatives: ${e.message}"
+            }
         }
     }
 
-    private suspend fun getCivicApiRepresentatives(): RepresentativeResponse {
-        return CivicsApi.retrofitService.getRepresentatives(_addressOfUser.value!!.toFormattedString())
+    fun setAddressOfUser(address: Address){
+        _addressOfUser.value = address
     }
 
-    private fun setRepresentativesFromResponse() {
-        val offices = _representativesResponse.value!!.offices
-        val officials = _representativesResponse.value!!.officials
-        _representatives.value = offices.flatMap { office -> office.getRepresentatives(officials) }
+
+    fun setRepresentatives(list : List<Representative>){
+        _representatives.value = list
     }
+
+
 }
