@@ -15,10 +15,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#C5D2F8"
-        android:elevation="18dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginTop="@dimen/makeFive"
+        android:backgroundTint="@color/backgroundTint"
+        android:elevation="@dimen/elevation"
+        app:cardCornerRadius="@dimen/default_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -30,8 +30,8 @@
 
             <ImageView
                 android:id="@+id/president_image"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/validSize"
+                android:layout_height="@dimen/validSize"
                 android:layout_marginStart="@dimen/default_padding"
                 android:layout_marginTop="@dimen/default_padding"
                 app:profileImage="@{representative.official.photoUrl}"
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/large_padding"
                 android:text="@{representative.office.name.toString()}"
-                android:textSize="16sp"
+                android:textSize="@dimen/medium_padding"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/president_image"
                 app:layout_constraintTop_toTopOf="@+id/president_image" />
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/large_padding"
                 android:text="@{representative.official.name}"
-                android:textSize="16sp"
+                android:textSize="@dimen/medium_padding"
                 app:layout_constraintStart_toEndOf="@+id/president_image"
                 app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
@@ -74,8 +74,8 @@
 
             <ImageView
                 android:id="@+id/web_item_image"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/testSize"
+                android:layout_height="@dimen/testSize"
                 android:layout_marginEnd="@dimen/large_padding"
                 app:layout_constraintBottom_toBottomOf="@+id/party_text"
                 app:layout_constraintEnd_toStartOf="@+id/facebook_item_image"
@@ -84,8 +84,8 @@
 
             <ImageView
                 android:id="@+id/facebook_item_image"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/testSize"
+                android:layout_height="@dimen/testSize"
                 android:layout_marginEnd="@dimen/large_padding"
                 app:layout_constraintBottom_toBottomOf="@+id/party_text"
                 app:layout_constraintEnd_toStartOf="@+id/twitter_item_image"
@@ -94,8 +94,8 @@
 
             <ImageView
                 android:id="@+id/twitter_item_image"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/testSize"
+                android:layout_height="@dimen/testSize"
                 android:layout_marginEnd="@dimen/large_padding"
                 app:layout_constraintBottom_toBottomOf="@+id/party_text"
                 app:layout_constraintEnd_toEndOf="parent"

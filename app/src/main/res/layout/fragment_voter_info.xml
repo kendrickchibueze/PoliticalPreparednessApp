@@ -19,13 +19,13 @@
             android:id="@+id/election_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#263063"
-            android:backgroundTint="#673AB7"
+            android:background="@color/nice_blue"
+            android:backgroundTint="@color/moove"
             android:padding="@dimen/default_padding"
             android:singleLine="true"
             app:layout_constraintTop_toTopOf="parent"
             app:title="Election Name!"
-            app:titleTextColor="#FFFFFF"
+            app:titleTextColor="@color/white"
             tools:ignore="MissingClass" />
 
 
@@ -36,7 +36,7 @@
             android:layout_marginStart="@dimen/large_padding"
             android:layout_marginTop="@dimen/large_padding"
             android:text="Electoin Date: "
-            android:textSize="18sp"
+            android:textSize="@dimen/my_textSize"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/election_name" />
@@ -59,8 +59,8 @@
             android:layout_marginStart="@dimen/large_padding"
             android:layout_marginTop="@dimen/very_large_padding"
             android:text="Election Information"
-            android:textColor="#7C7676"
-            android:textSize="18dp"
+            android:textColor="@color/anothergray"
+            android:textSize="@dimen/elevation"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/electionDateText" />
@@ -73,7 +73,7 @@
             android:layout_marginStart="@dimen/large_padding"
             android:layout_marginTop="@dimen/very_large_padding"
             android:text="Voter Info"
-            android:textSize="14sp"
+            android:textSize="@dimen/small_padding"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/election_info" />
 
@@ -85,21 +85,21 @@
             android:layout_marginTop="@dimen/very_large_padding"
             android:layout_marginEnd="@dimen/very_large_padding"
             android:text="Ballot Info"
-            android:textSize="14sp"
+            android:textSize="@dimen/small_padding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/election_info" />
 
         <Button
             android:id="@+id/followButton"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/layout_width"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/large_padding"
             android:layout_marginEnd="@dimen/large_padding"
             android:layout_marginBottom="@dimen/default_padding"
-            android:backgroundTint="#83192a"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="Follow"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_padding"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

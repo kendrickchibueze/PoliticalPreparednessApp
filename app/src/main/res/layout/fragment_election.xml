@@ -17,13 +17,13 @@
 
                 <TextView
                     android:id="@+id/upcomingElectionsHeader"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/default_padding"
                     android:layout_marginTop="@dimen/default_padding"
                     android:text="@string/upcoming_elections"
-                    android:textColor="#7A7979"
-                    android:textSize="24sp"
+                    android:textColor="@color/nicegray_text"
+                    android:textSize="@dimen/new_textSize"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/upcomingElectionsRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="@dimen/layout_heigth"
                     android:layout_marginStart="@dimen/default_padding"
                     android:layout_marginEnd="@dimen/default_padding"
                     android:layout_marginTop="@dimen/default_padding"
@@ -45,13 +45,13 @@
 
                 <TextView
                     android:id="@+id/savedElectionsHeader"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/default_padding"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="@dimen/new_textSize"
                     android:text="@string/saved_elections_header"
-                    android:textColor="#7A7979"
-                    android:textSize="24sp"
+                    android:textColor="@color/nicegray_text"
+                    android:textSize="@dimen/new_textSize"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/savedElectionsRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="@dimen/layout_heigth"
                     android:layout_marginStart="@dimen/default_padding"
                     android:layout_marginEnd="@dimen/default_padding"
                     android:layout_marginTop="@dimen/default_padding"
